@@ -1,44 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sample Page</title>
     <style>
-       
-li:hover {
-  background-color: lightblue;
-}
-
-li:active {
-  transform: scale(0.95);
-}
-
-li:focus {
-  outline: 2px solid orange;
-}
-
-
-ul:first-child li {
-  color: blue;
-}
-
-ul:nth-child(2) li {
-  color: green;
-}
-
-ul:nth-child(3) li {
-  color: red;
-}
-
-ul:nth-child(4) li {
-  color: purple;
-}
-
-ul:last-child li {
-  color: orange;
-}
-      </style>
+        .lessons-container ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        
+        .lessons-container ul li:link {
+            color: blue;
+        }
+        
+        .lessons-container ul li:visited {
+            color: purple;
+        }
+        
+        .lessons-container ul li:hover {
+            background-color: lightgray;
+        }
+        
+        .lessons-container ul li:focus {
+            outline: 2px solid red;
+        }
+        
+        .lessons-container ul li:disabled {
+            opacity: 0.5;
+        }
+        
+        .lessons-container ul li:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .lessons-container ul li:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+        
+        .lessons-container ul li:nth-child(3n) {
+            font-weight: bold;
+        }
+        
+        .lessons-container ul li:nth-child(n+2) {
+            color: green;
+        }
+        
+        .lessons-container ul li:nth-child(-n+2) {
+            color: orange;
+        }
+        
+        .lessons-container ul li:nth-child(3) {
+            text-decoration: underline;
+        }
+        
+        .lessons-container ul li:first-child {
+            font-style: italic;
+        }
+        
+        .lessons-container ul li:last-child {
+            text-transform: uppercase;
+        }
+        
+        .lessons-container ul li:only-child {
+            font-size: 20px;
+        }
+        
+        .lessons-container ul li:empty {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="lessons-container">
